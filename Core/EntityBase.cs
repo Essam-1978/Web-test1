@@ -8,4 +8,7 @@ namespace Core
         public Guid Id { get; set; }
     }
     
+
+
+    // Here we add this comment for testing git
 }
