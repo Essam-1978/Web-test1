@@ -1,0 +1,29 @@
+﻿@model web_deploy_1.ViewModels.Emp_by_Dep
+@{
+    ViewBag.Title = "return_two_objects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>in @Model.department.dep_name</h1>
+  
+    <table>
+    <tr style="background-color:chocolate">
+        <td>Name</td>
+        <td>ID</td>
+    </tr>
+
+        
+    @foreach (var emp in Model.Employees)
+    {
+        <tr>
+            <td>
+                @emp.emp_name
+            </td>
+            <td>
+                @emp.emp_id
+            </td>
+        </tr>
+        
+    }
+</table>
+
+
