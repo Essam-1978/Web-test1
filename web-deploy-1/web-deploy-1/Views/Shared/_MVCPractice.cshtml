@@ -1,0 +1,68 @@
+﻿<div style="display:flex;flex-direction:column;flex-wrap:wrap">
+
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("Try Text", "return_text", "Employee")
+
+        this actionresult called return_text() in Employess controllers and use contents() function
+    </div>
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("Click Here", "dummy1", "Employee")
+    </div>
+
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("send integer", "edit_T", "Employee")
+        this actionresult called edit_T it recieved <span style="color:blue">(int id)</span>
+        <br />
+        because it<span style="font-weight:600">reseving</span> we should url
+        <br />
+        localhost/Employee/edit_t?id=4
+        </br>
+        because the name of variable is id that matched the Rout Map rule
+        </br>
+        we can also write this localhost/Employee/edit_t/4
+    </div>
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("send string", "edit_R", "Employee")
+
+        ActionResult called edit_R it recieving (string v)
+        we call localhost/employee/edit_r?v=essam
+    </div>
+
+
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("LIST", "List_emp", "Employee")
+        ActionResult List_emp, recieve 2 variables if they are null,the have default values
+    </div>
+
+
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("send dataview", "send_data", "Employee")
+        ActionResult uses ViewData dictionary object to pass 3 variables
+
+    </div>
+
+
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("Return Employee", "return_emp_obj", "Employee")
+        ActionResult returns ONE object
+
+    </div>
+
+
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("Return Employee List", "list_employee", "Employee")
+        ActionResult returns List of objects
+
+    </div>
+
+
+    <div style="background-color:burlywood;color:white">
+        @Html.ActionLink("Return Employee and Dep", "return_two_objects", "Employee")
+        ActionResult returns TWO of objects
+
+    </div>
+
+
+
+</div>
+

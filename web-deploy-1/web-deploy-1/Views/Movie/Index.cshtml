@@ -1,0 +1,26 @@
+﻿
+    @model IList<web_deploy_1.Models.Movie>
+        @using System.Collections
+@using System.Collections.Generic
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+@foreach(var M in Model)
+{
+    <ul>
+        <li>
+            @M.mov_id
+        </li>
+        <li>
+            @M.mov_title
+        </li>
+    </ul>
+    
+}
+
+
+<h2>Index</h2>
+

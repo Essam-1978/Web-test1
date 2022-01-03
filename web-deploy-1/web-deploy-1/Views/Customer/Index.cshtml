@@ -1,0 +1,16 @@
+﻿@model IList<web_deploy_1.Models.Customer>
+                 @using System.Collections
+                 @using System.Collections.Generic
+    
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    <h2>Customers</h2>
+    @foreach(web_deploy_1.Models.Customer C in Model)
+    {
+        <ul>
+            <li>@C.cust_name</li>
+        </ul>
+    }
+
