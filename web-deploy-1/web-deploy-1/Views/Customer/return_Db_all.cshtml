@@ -1,0 +1,24 @@
+﻿@model IEnumerable<web_deploy_1.Models.Customer>
+@{
+    ViewBag.Title = "return_Db_all";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>return_Db_all</h2>
+<h1>@Html.ActionLink("Create", "create_cust_form", "Customer")</h1>
+
+@foreach(web_deploy_1.Models.Customer C in Model)
+{
+
+    <ul>
+
+        <li> <a href="Details_cus/?cust=@C.Id">
+              @C.Name</a>  
+           @C.MemberShipType.DiscountRate ------ @C.MemberShipType.Name
+        -----@C.Email -------@C.Birthdate
+    <!-- //Html.ActionLink("Edit","edit_cust","Customer", new { id =C.Id}) -->  
+        <a href="edit_cust?id=@C.Id">Edit</a>
+        <a href="delet_cust?id=@C.Id">Delete</a>
+        </li>
+    </ul>
+}

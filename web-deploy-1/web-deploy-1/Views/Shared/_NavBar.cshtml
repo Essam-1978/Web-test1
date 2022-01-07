@@ -10,8 +10,11 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Movies", "Index", "Movie")</li>
-                <li>@Html.ActionLink("Customers", "Index", "Customer")</li>
+                <li>@Html.ActionLink("Movies(List)", "Index", "Movie")</li>
+                <li>@Html.ActionLink("Movies(DB-all)","Index2","Movie")</li>
+                <li>@Html.ActionLink("Customers(List)", "Index", "Customer")</li>
+                <li>@Html.ActionLink("CustomersAll(Db)", "return_Db_all", "Customer")</li>
+                <li>@Html.ActionLink("CustomersSingle(Db)", "return_Db_Single", "Customer")</li>
                
                 <li></li>
             </ul>

@@ -1,0 +1,31 @@
+﻿@model web_deploy_1.Models.Customer
+
+@{
+    ViewBag.Title = "return_Db_Single";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>return_Db_Single</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+       
+        <dt>
+            Discount rate is @Model.MemberShipType.DiscountRate
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

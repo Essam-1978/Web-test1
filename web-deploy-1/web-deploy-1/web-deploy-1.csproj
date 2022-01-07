@@ -168,6 +168,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BusinessLogic\email_validate.cs" />
+    <Compile Include="BusinessLogic\name_validate.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
@@ -178,16 +180,64 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201030318354_InitialModel.cs" />
+    <Compile Include="Migrations\202201030318354_InitialModel.Designer.cs">
+      <DependentUpon>202201030318354_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201031616572_AddIsSubscribeNewsLetter.cs" />
+    <Compile Include="Migrations\202201031616572_AddIsSubscribeNewsLetter.Designer.cs">
+      <DependentUpon>202201031616572_AddIsSubscribeNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201031625385_Add_Class_MemberShipType.cs" />
+    <Compile Include="Migrations\202201031625385_Add_Class_MemberShipType.Designer.cs">
+      <DependentUpon>202201031625385_Add_Class_MemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201031749579_FeeMemberShipType_Table.cs" />
+    <Compile Include="Migrations\202201031749579_FeeMemberShipType_Table.Designer.cs">
+      <DependentUpon>202201031749579_FeeMemberShipType_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201032201408_AddNameProperty_MemberShipType.cs" />
+    <Compile Include="Migrations\202201032201408_AddNameProperty_MemberShipType.Designer.cs">
+      <DependentUpon>202201032201408_AddNameProperty_MemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201032204140_Update_MemberShipType_Table.cs" />
+    <Compile Include="Migrations\202201032204140_Update_MemberShipType_Table.Designer.cs">
+      <DependentUpon>202201032204140_Update_MemberShipType_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201040127205_Add_Movies_and_GenreTables.cs" />
+    <Compile Include="Migrations\202201040127205_Add_Movies_and_GenreTables.Designer.cs">
+      <DependentUpon>202201040127205_Add_Movies_and_GenreTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201040131138_feed_genre_table.cs" />
+    <Compile Include="Migrations\202201040131138_feed_genre_table.Designer.cs">
+      <DependentUpon>202201040131138_feed_genre_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201071140287_add_atribute_to_Customer_Model.cs" />
+    <Compile Include="Migrations\202201071140287_add_atribute_to_Customer_Model.Designer.cs">
+      <DependentUpon>202201071140287_add_atribute_to_Customer_Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201071255395_add_atribute3_to_Customer_Model.cs" />
+    <Compile Include="Migrations\202201071255395_add_atribute3_to_Customer_Model.Designer.cs">
+      <DependentUpon>202201071255395_add_atribute3_to_Customer_Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201071309267_add_atribute4_to_Customer_Model.cs" />
+    <Compile Include="Migrations\202201071309267_add_atribute4_to_Customer_Model.Designer.cs">
+      <DependentUpon>202201071309267_add_atribute4_to_Customer_Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\class_test.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Dep.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Cust_by_MemberShip.cs" />
     <Compile Include="ViewModels\Emp_by_Dep.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -257,6 +307,14 @@
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Shared\_MVCPractice.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\return_Db_Single.cshtml" />
+    <Content Include="Views\Customer\return_Db_all.cshtml" />
+    <Content Include="Views\Customer\Details_cus.cshtml" />
+    <Content Include="Views\Movie\Index2.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Movie\new_movie.cshtml" />
+    <Content Include="Views\Customer\create_cust_form.cshtml" />
+    <Content Include="Views\Customer\edit_form.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -269,6 +327,41 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202201030318354_InitialModel.resx">
+      <DependentUpon>202201030318354_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201031616572_AddIsSubscribeNewsLetter.resx">
+      <DependentUpon>202201031616572_AddIsSubscribeNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201031625385_Add_Class_MemberShipType.resx">
+      <DependentUpon>202201031625385_Add_Class_MemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201031749579_FeeMemberShipType_Table.resx">
+      <DependentUpon>202201031749579_FeeMemberShipType_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201032201408_AddNameProperty_MemberShipType.resx">
+      <DependentUpon>202201032201408_AddNameProperty_MemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201032204140_Update_MemberShipType_Table.resx">
+      <DependentUpon>202201032204140_Update_MemberShipType_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201040127205_Add_Movies_and_GenreTables.resx">
+      <DependentUpon>202201040127205_Add_Movies_and_GenreTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201040131138_feed_genre_table.resx">
+      <DependentUpon>202201040131138_feed_genre_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201071140287_add_atribute_to_Customer_Model.resx">
+      <DependentUpon>202201071140287_add_atribute_to_Customer_Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201071255395_add_atribute3_to_Customer_Model.resx">
+      <DependentUpon>202201071255395_add_atribute3_to_Customer_Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201071309267_add_atribute4_to_Customer_Model.resx">
+      <DependentUpon>202201071309267_add_atribute4_to_Customer_Model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

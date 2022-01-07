@@ -1,0 +1,25 @@
+﻿@model web_deploy_1.Models.Movie
+@{
+    ViewBag.Title = "new_movie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>new_movie</h2>
+
+@using (Html.BeginForm("create_movie", "Movie"))
+{
+
+    <div class="form-group">
+
+        @Html.LabelFor(m=>m.Title)
+        @Html.TextBoxFor(m=>m.Title,new { @class="form-control" })
+
+
+
+
+    
+    </div>
+
+
+}
+

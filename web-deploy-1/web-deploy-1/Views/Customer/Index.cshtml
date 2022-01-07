@@ -1,6 +1,5 @@
 ﻿@model IList<web_deploy_1.Models.Customer>
-                 @using System.Collections
-                 @using System.Collections.Generic
+                
     
     @{
         ViewBag.Title = "Index";
@@ -10,7 +9,7 @@
     @foreach(web_deploy_1.Models.Customer C in Model)
     {
         <ul>
-            <li>@C.cust_name</li>
+            <li>@C.Name</li>
         </ul>
     }
 
